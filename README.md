@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 A Streamlit app for forecasting CO₂ emissions and exploring environmental data with machine learning and visualizations.
 
 🚀 Features
@@ -44,3 +45,6 @@ Visit: http://localhost:8501
 
 🛠️ Tech Stack
 Streamlit · Scikit-learn · Pandas · Seaborn · Sweetviz · YData Profiling
+=======
+# co2-emission-forecasting
+>>>>>>> e50dad0be5309852ceab8f4a7df4d1fcfe42a1a8
