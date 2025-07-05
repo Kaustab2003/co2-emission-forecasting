@@ -8,10 +8,10 @@ from utils.utils import load_model
 # Advanced visualization libraries
 from sklearn.cluster import KMeans
 from statsmodels.tsa.seasonal import seasonal_decompose
-from ydata_profiling import ProfileReport
+# from ydata_profiling import ProfileReport
 
-from streamlit_pandas_profiling import st_profile_report
-import sweetviz as sv
+# from streamlit_pandas_profiling import st_profile_report
+# import sweetviz as sv
 
 # ---------- Load Data ----------
 def load_data(file_path):
@@ -141,23 +141,23 @@ def main():
         csv_data = df.to_csv(index=False).encode('utf-8')
         st.download_button("Download CSV", csv_data, file_name="explored_data.csv", mime="text/csv")
 
-        # ---------- Auto EDA Report - Pandas Profiling ----------
-        st.write("### 📑 Pandas Profiling EDA Report")
-        if st.button("Generate Pandas Profiling Report"):
-            profile = ProfileReport(df, title="Pandas Profiling Report", explorative=True)
-            st_profile_report(profile)
+    #     # ---------- Auto EDA Report - Pandas Profiling ----------
+    #     st.write("### 📑 Pandas Profiling EDA Report")
+    #     if st.button("Generate Pandas Profiling Report"):
+    #         profile = ProfileReport(df, title="Pandas Profiling Report", explorative=True)
+    #         st_profile_report(profile)
 
-        # ---------- Auto EDA Report - Sweetviz ----------
-        st.write("### 🍬 Sweetviz Report")
-        if st.button("Generate Sweetviz Report"):
-            report = sv.analyze(df)
-            report.show_html("sweetviz_report.html")
-            st.success("Sweetviz report generated as sweetviz_report.html (check your project folder).")
+    #     # ---------- Auto EDA Report - Sweetviz ----------
+    #     st.write("### 🍬 Sweetviz Report")
+    #     if st.button("Generate Sweetviz Report"):
+    #         report = sv.analyze(df)
+    #         report.show_html("sweetviz_report.html")
+    #         st.success("Sweetviz report generated as sweetviz_report.html (check your project folder).")
 
-    except FileNotFoundError:
-        st.error(f"❌ File not found: {file_path}")
-    except Exception as e:
-        st.error(f"⚠️ Error: {e}")
+    # except FileNotFoundError:
+    #     st.error(f"❌ File not found: {file_path}")
+    # except Exception as e:
+    #     st.error(f"⚠️ Error: {e}")
 
 # ---------- Run ----------
 if __name__ == "__main__":
