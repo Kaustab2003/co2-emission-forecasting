@@ -7,4 +7,5 @@ seaborn
 joblib
 statsmodels
 scipy
+pandas-profiling==3.6.6  # Replace ydata-profiling
 pyarrow
