@@ -41,7 +41,8 @@ pip install -r requirements.txt
 
 # Run the app
 streamlit run app.py
-Visit: https://co2-emission-forecasting-8tu8je3fqtzygenrtdntjs.streamlit.app/Dashboard
+Visit: https://co2-emission-forecasting-sgganyzasvvzvmnspbla7l.streamlit.app/
+
 
 🛠️ Tech Stack
 Streamlit · Scikit-learn · Pandas · Seaborn · Sweetviz · YData Profiling
